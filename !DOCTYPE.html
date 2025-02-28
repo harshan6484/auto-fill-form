@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auto-Submit Google Form</title>
     <script>
-        window.addEventListener('beforeunload', function (e) {
-            // Automatically submit the form when the user navigates away
+        window.addEventListener('blur', function () {
+            // Automatically submit the form when the user switches tabs
             const iframe = document.getElementById('google-form');
             const form = iframe.contentDocument.querySelector('form');
             if (form) {
