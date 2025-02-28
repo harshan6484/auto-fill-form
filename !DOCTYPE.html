@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Submit Google Form</title>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            // Automatically submit the form when the user navigates away
+            const iframe = document.getElementById('google-form');
+            const form = iframe.contentDocument.querySelector('form');
+            if (form) {
+                form.submit();
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Auto-Submit Google Form</h1>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQlyEFa1ouU5ZSRqNUjb49Szre35xmrspmwvmuJuGKjpwoLg/viewform?embedded=true" width="640" height="7920" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</body>
+</html>
